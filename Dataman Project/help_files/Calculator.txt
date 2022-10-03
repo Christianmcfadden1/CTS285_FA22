@@ -1,0 +1,111 @@
+""" 
+This program will calculate the sum, product, quotient and/or difference of two numbers.
+
+store = str(number1) + "/" + str(number2) + "/" + str(solution)
+        print(store)
+        memory.append(store)
+        print(memory)
+
+Calculator 
+Christian Mcfadden
+8-23-2022
+CTS 285
+"""
+def menu():
+  print("Welcome to the calculator program.")
+  print("Please choose a option 1-5")
+  print("1. Add")
+  print("2. Subtract")
+  print("3. Multiply")
+  print("4. Divide")
+  print("5. Exit")
+
+def getTwo():
+  print()
+  num1 = int(input("Please enter number #1: "))
+  num2 = int(input("Please enter number #2: "))
+  print()
+  return num1, num2
+
+def display(num1, num2, result, op):
+  print("{} {} {} = {}".format(num1, op, num2, result))
+  print()
+  
+def add():
+  num1, num2 = getTwo()
+  print("You selected: Add")
+  op = "+"
+  result = num1 + num2
+  return op, result, num1, num2 
+
+def subract():
+  num1, num2 = getTwo()
+  print("You selected: Subtract")
+  op = "-"
+  result = num1 - num2
+  return op, result, num1, num2 
+  
+def multiply():
+  num1, num2 = getTwo()
+  print("You selected: Multiply")
+  op = "x"
+  result = num1 * num2
+  return op, result, num1, num2 
+  
+def divide():
+  num1, num2 = getTwo()
+  print("You selected: Divide")
+  op = "/"
+  result = num1 / num2
+  return op, result, num1, num2 
+
+def repeatMenu():
+  print("Would you like to repeat?")
+  print("1. Repeat")
+  print("2. Exit")
+  
+def main(response):
+  if response == 1:
+    op, result, num1, num2 = add()
+    display(num1, num2, result, op)
+    
+  elif response == 2:
+    op, result, num1, num2  = subract()
+    display(num1, num2, result, op)
+    
+  elif response == 3:
+    op, result, num1, num2  = multiply()
+    display(num1, num2, result, op)
+    
+  elif response == 4:
+    op, result, num1, num2  = divide()
+    display(num1, num2, result, op)
+    
+  elif response == 5:
+    print()
+    print("You selected: Exit")
+    print("Program Has Been Terminated")
+    
+def before():
+    menu()
+    response = int(input("Please make a selection 1-5: "))
+    main(response)
+    repeatMenu()
+    redo = int(input("Select #1 or #2: "))
+    if redo == 1:
+      while redo == 1:
+        main(response)
+        repeatMenu()
+        redo = int(input("Select #1 or #2: "))
+      if redo == 2:
+        print()
+        print("You selected: Exit")
+        print("Program Has Been Terminated")
+    else:
+      print()
+      print("You selected: Exit")
+      print("Program Has Been Terminated")
+
+
+
+before()

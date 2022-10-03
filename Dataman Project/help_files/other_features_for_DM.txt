@@ -1,0 +1,63 @@
+def storeAdd(number1, number2, memory, op, displayMem):
+    print()
+    solution = getSolutionAdd(number1, number2)
+    store = str(number1) +  " " + op + " " + str(number2) + " " + str(solution)
+    print(store)
+    memory.append(store)
+    displayStore = str(number1) +  " " + op + " " + str(number2)
+    print(displayStore)
+    displayMem.append(displayStore)
+    return memory, displayMem
+
+def getSolutionAdd(number1, number2):
+    solution = int(number1) + int(number2)
+    return solution
+
+-----------------------------Subtract--------------------------------------------
+
+def storeSubtract(number1, number2, memory, op, displayMem):
+	print()
+	solution = getSolutionSubtract(number1, number2) ## New
+	store = str(number1) +  " " + op + " " + str(number2) + " " + str(solution)
+	print(store)
+    	memory.append(store)
+    	displayStore = str(number1) +  " " + op + " " + str(number2)
+    	print(displayStore)
+    	displayMem.append(displayStore)
+    	return memory, displayMem 
+
+def getSolutionSubtract(number1, number2):
+    solution = int(number1) - int(number2)
+    return solution
+-----------------------------Multiply------------------------------------------
+
+def storeMulti(number1, number2, memory, op, displayMem):
+	print()
+	solution = getSolutionMulti(number1, number2) ## New
+	store = str(number1) +  " " + op + " " + str(number2) + " " + str(solution)
+	print(store)
+    	memory.append(store)
+    	displayStore = str(number1) +  " " + op + " " + str(number2)
+    	print(displayStore)
+    	displayMem.append(displayStore)
+    	return memory, displayMem 
+
+def getSolutionMulti(number1, number2):
+    solution = int(number1) * int(number2)
+    return solution
+--------------------------Divide-----------------------------------------------
+
+def storeDivide(number1, number2, memory, op, displayMem):
+	print()
+	solution = getSolutionDivide(number1, number2) ## New
+	store = str(number1) +  " " + op + " " + str(number2) + " " + str(solution)
+	print(store)
+    	memory.append(store)
+    	displayStore = str(number1) +  " " + op + " " + str(number2)
+    	print(displayStore)
+    	displayMem.append(displayStore)
+    	return memory, displayMem 
+
+def getSolutionDivide(number1, number2):
+    solution = int(number1) / int(number2)
+    return solution
